@@ -1,8 +1,10 @@
 require("@nomiclabs/hardhat-waffle")
 require("@nomiclabs/hardhat-ethers")
+require("@nomiclabs/hardhat-etherscan");
+
 require('dotenv').config()
 
-const { API_URL, PRIVATE_KEY } = process.env
+const { API_URL, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env
 
 
 // You need to export an object to set up your config
@@ -20,5 +22,8 @@ module.exports = {
       url: API_URL,
       accounts: [`0x${PRIVATE_KEY}`]
     }
-  }
+  },
+  // etherscan: {
+    // apiKey: `${ETHERSCAN_API_KEY}`,
+  // },
 };

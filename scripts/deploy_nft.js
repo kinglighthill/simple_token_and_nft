@@ -32,6 +32,7 @@ async function mint(contract, imageName) {
 async function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time))
 }
+
 const runMain = async () => {
     try {
         await main()
